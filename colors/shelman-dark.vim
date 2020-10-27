@@ -1,6 +1,6 @@
 lua << EOF
 
-vim.g.colors_name = 'dln'
+vim.g.colors_name = 'shelman-dark'
 
 local black       = '#171717'
 local gray        = '#808080'
@@ -512,7 +512,7 @@ local highlight_groups = {
 	TSVariableBuiltin = 'Identifier',
 }
 
-require('dln')(
+require('shelman')(
 	highlight_group_normal,
 	highlight_groups
 )
