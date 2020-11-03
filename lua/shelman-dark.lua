@@ -25,6 +25,7 @@ require("material-colors")
 
 -- Terminal colors
 
+
 Color.new('black',     '#171a23')
 Color.new('white',     c.blue_grey_100:to_rgb())
 Color.new('red',       c.red_300:to_rgb())
@@ -42,19 +43,43 @@ Color.new('seagreen',  c.teal_200:to_rgb())
 Color.new('turquoise', c.teal_200:to_rgb())
 
 -- Extra colors
-Color.new('deep_red',  '#170000')
+Color.new('deep_red',  '#300000')
+Color.new('cursor_line', '#1e2229')
 
 --
 -- Groups
 --
 
-Group.new('Normal', c.white, c.black)
-Group.new('Comment', c.blue_grey_200, c.bg, b + i)
+Group.new('Normal',       c.white,         c.black)
+Group.new('Bold',         c.none,          c.none, b)
+Group.new('Italic',       c.none,          c.none, i)
+Group.new('VertSplit',    c.blue_grey_900, c.none)
+Group.new('LineNr',       c.blue_grey_800, c.none, i)
+Group.new('SignColumn',   c.blue_grey_500, c.none)
+Group.new('MsgArea',      c.orange_900,    c.none, i)
+Group.new('Visual',       c.cyan_100,      c.indigo_900)
+Group.new('CursorLine',   c.none,          c.cursor_line)
+Group.new('CursorLineNR', c.blue_grey_500, c.cursor_line)
+
+-- Standard
+
+Group.new('Comment',     c.grey_600,        c.none, b + i)
+Group.new('Identifier',  c.indigo_100,      c.none, no)
+Group.new('Keyword',     c.light_blue_200,  c.none, no)
+Group.new('Function',    c.light_green_400, c.none, no)
+Group.new('String',      c.orange_200,      c.none, i)
+Group.new('Conditional', c.red_300,         c.none, no)
+Group.new('Operator',    c.teal_100,        c.none, no)
+Group.new('Type',        c.deep_purple_100, c.none, no)
+
+-- Go
+Group.new('goFunction',     c.none,       c.none, b)
 
 -- LSP
-vim.api.nvim_command('highlight LspDiagnosticsUnderline gui=undercurl guisp=#ff0000')
-vim.api.nvim_command('highlight LspDiagnosticsUnderlineError gui=undercurl guisp=#ff0000')
+vim.api.nvim_command('highlight LspDiagnosticsUnderline gui=undercurl guisp=#ffd54f')
+vim.api.nvim_command('highlight LspDiagnosticsUnderlineError gui=undercurl guisp=#f44336')
 
-Group.new('LspDiagnosticsWarning', c.red_500, c.deep_red, i)
-Group.new('LspDiagnosticsError', c.red_500, nil, i)
+Group.new('LspDiagnosticsHint',    c.lime_500,   c.none, i)
+Group.new('LspDiagnosticsWarning', c.orange_400, c.deep_red, i)
+Group.new('LspDiagnosticsError',   c.red_500,    c.deep_red, i)
 
