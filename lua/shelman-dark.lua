@@ -7,8 +7,6 @@
 
 vim.g.colors_name = 'shelman-dark'
 
-require("material-colors")
-
 local Color, c, Group, g, s = require("colorbuddy").setup()
 local b = s.bold
 local i = s.italic
@@ -19,12 +17,38 @@ local r = s.reverse
 local sto = s.standout
 local no = s.NONE
 
--- Color.new('bg', '#242f35')
-Color.new('bg', '#171a23')
-Color.new('fg', '#f2fdf7')
-Color.new('deep_red', '#330000')
+--
+-- Colors
+--
 
-Group.new('Normal', c.fg, c.bg)
+require("material-colors")
+
+-- Terminal colors
+
+Color.new('black',     '#171a23')
+Color.new('white',     c.blue_grey_100:to_rgb())
+Color.new('red',       c.red_300:to_rgb())
+Color.new('pink',      c.pink_300:to_rgb())
+Color.new('green',     c.green_300:to_rgb())
+Color.new('yellow',    c.yellow_300:to_rgb())
+Color.new('blue',      c.blue_300:to_rgb())
+Color.new('aqua',      c.green_200:to_rgb())
+Color.new('cyan',      c.cyan_200:to_rgb())
+Color.new('purple',    c.deep_purple_200:to_rgb())
+Color.new('violet',    c.purple_200:to_rgb())
+Color.new('orange',    c.orange_200:to_rgb())
+Color.new('brown',     c.brown_300:to_rgb())
+Color.new('seagreen',  c.teal_200:to_rgb())
+Color.new('turquoise', c.teal_200:to_rgb())
+
+-- Extra colors
+Color.new('deep_red',  '#170000')
+
+--
+-- Groups
+--
+
+Group.new('Normal', c.white, c.black)
 Group.new('Comment', c.blue_grey_200, c.bg, b + i)
 
 -- LSP
