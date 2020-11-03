@@ -60,6 +60,7 @@ Group.new('MsgArea',      c.orange_900,    c.none, i)
 Group.new('Visual',       c.cyan_100,      c.indigo_900)
 Group.new('CursorLine',   c.none,          c.cursor_line)
 Group.new('CursorLineNR', c.blue_grey_500, c.cursor_line)
+Group.new('ColorColumn',  c.none,          c.cursor_line)
 
 -- Standard
 
