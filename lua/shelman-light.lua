@@ -44,7 +44,8 @@ Color.new('turquoise', c.teal_200:to_rgb())
 
 -- Extra colors
 Color.new('deep_red',  '#300000')
-Color.new('cursor_line', '#f7f7f0')
+Color.new('cursor_line', '#fcfaed')
+Color.new('margin', '#f2f2f2')
 
 --
 -- Groups
@@ -59,20 +60,30 @@ Group.new('SignColumn',   c.blue_grey_500, c.none)
 Group.new('MsgArea',      c.orange_900,    c.none, i)
 Group.new('Visual',       c.none,      c.amber_300)
 Group.new('CursorLine',   c.none,          c.cursor_line)
-Group.new('CursorLineNR', c.blue_grey_500, c.cursor_line)
+Group.new('CursorLineNR', c.blue_grey_500, c.none, b + i)
 Group.new('ColorColumn',  c.none,          c.cursor_line)
 
 -- Standard
 
-Group.new('Comment',     c.brown_600,        c.none, b + i)
+Group.new('Comment',     c.brown_400,       c.none, b + i)
 Group.new('Identifier',  c.indigo_500,      c.none, no)
 Group.new('Keyword',     c.light_blue_500,  c.none, no)
-Group.new('Function',    c.light_green_400, c.none, no)
+Group.new('Function',    c.green_700,       c.none, no)
 Group.new('Label',       c.orange_600,      c.none, i)
-Group.new('String',      c.green_700,      c.none, i)
+Group.new('String',      c.deep_orange_a700,        c.none, i)
 Group.new('Conditional', c.red_300,         c.none, no)
-Group.new('Operator',    c.teal_500,        c.none, no)
+Group.new('Operator',    c.blue_a200,       c.none, no)
+Group.new('PreProc',     c.teal_500,        c.none, no)
+Group.new('Special',     c.deep_purple_400, c.none, no)
+Group.new('Statement',   c.blue_grey_800,   c.none, no)
 Group.new('Type',        c.deep_purple_500, c.none, no)
+
+-- Indent guides
+Group.new('Indent1',  c.red_100, c.none, i)
+Group.new('Indent2',  c.green_100, c.none, i)
+Group.new('Indent3',  c.blue_100, c.none, i)
+Group.new('Indent4',  c.orange_100, c.none, i)
+Group.new('IndentSpace',  c.grey_100, c.none, i)
 
 -- Go
 Group.new('goFunction',     c.none,       c.none, b)
