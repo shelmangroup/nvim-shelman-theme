@@ -67,6 +67,8 @@ Group.new('ColorColumn',  c.none,          c.cursor_line)
 -- Standard
 
 Group.new('Comment',     c.brown_400,       c.none, b + i)
+Group.new('Constant',    c.cyan_600,        c.none, no)
+Group.new('Directory',   c.blue_700,        c.none, b)
 Group.new('Identifier',  c.indigo_500,      c.none, no)
 Group.new('Keyword',     c.light_blue_500,  c.none, no)
 Group.new('Function',    c.green_700,       c.none, no)
@@ -77,7 +79,11 @@ Group.new('Operator',    c.blue_a200,       c.none, no)
 Group.new('PreProc',     c.teal_500,        c.none, no)
 Group.new('Special',     c.deep_purple_400, c.none, no)
 Group.new('Statement',   c.blue_grey_800,   c.none, no)
+Group.new('Tag',         c.pink_400,        c.none, b)
+Group.new('StorageClass', c.pink_600,   c.none, no)
+Group.new('Typedef',     c.purple_500,   c.none, no)
 Group.new('Type',        c.deep_purple_500, c.none, no)
+Group.new('Todo',        c.amber_900, c.none, i)
 
 -- Indent guides
 Group.new('Indent1',  c.red_100, c.none, i)
@@ -95,14 +101,25 @@ vim.api.nvim_command('highlight LspDiagnosticsUnderline gui=undercurl guisp=#ffd
 vim.api.nvim_command('highlight LspDiagnosticsUnderlineError cterm=undercurl guisp=#f44336')
 
 Group.new('LspDiagnosticsHint',    c.lime_500,   c.none, i)
-Group.new('LspDiagnosticsWarning', c.orange_400, c.deep_red, i)
-Group.new('LspDiagnosticsError',   c.red_500,    c.deep_red, i)
+Group.new('LspDiagnosticsWarning', c.orange_400, c.deep_red, i) -- bar
+Group.new('LspDiagnosticsError',   c.red_500,    c.deep_red, i) -- foo
 Group.new('LspDiagnosticsDefaultError', c.red_a700,    c.red_50, i)
-
-vim.fn.sign_define("LspDiagnosticsSignError", {text = "XX", numhl = "LspDiagnosticsDefaultError"})
 
 -- UI
 Group.new('PMenu',       c.none,  c.blue_100)
 Group.new('PMenuSel',    c.white, c.blue_700)
 Group.new('NormalFloat', c.none,  c.yellow_100)
 Group.new('FloatBorder', c.orange_300,  c.yellow_100)
+
+Group.new('TelescopeBorder', c.blue_600,  c.light_blue_50)
+Group.new('TelescopeNormal', c.blue_900,  c.light_blue_50)
+Group.new('TelescopeSelection', c.white,  c.blue_700)
+Group.new('TelescopeMatching', c.amber_900,  c.none)
+Group.new('Telescope', c.amber_900,  c.none)
+
+Group.new('GitSignsAdd', c.green_300,  c.none)
+Group.new('GitSignsAddNr', c.green_100,  c.none)
+Group.new('GitSignsDelete', c.red_600,  c.none)
+Group.new('GitSignsDeleteNr', c.red_100,  c.none)
+Group.new('GitSignsChange', c.orange_400,  c.none)
+Group.new('GitSignsChangeNr', c.orange_100, c.none)
