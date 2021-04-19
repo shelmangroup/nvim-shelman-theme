@@ -104,8 +104,8 @@ vim.fn.sign_define("LspDiagnosticsSignError", {text = "XX", numhl = "LspDiagnost
 -- UI
 Group.new('PMenu',       c.none,  c.blue_100)
 Group.new('PMenuSel',    c.white, c.blue_700)
-Group.new('NormalFloat', c.none,  c.light_green_50)
-Group.new('FloatBorder', c.light_green_500,  c.light_green_50)
+Group.new('NormalFloat', c.none,  c.yellow_100)
+Group.new('FloatBorder', c.orange_300,  c.yellow_100)
 
 -- LSP Saga
 Group.new('LspSagaBorderTitle',            c.grey_500, c.yellow_100, no)
