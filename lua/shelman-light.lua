@@ -97,7 +97,7 @@ vim.api.nvim_command('highlight LspDiagnosticsUnderlineError cterm=undercurl gui
 Group.new('LspDiagnosticsHint',    c.lime_500,   c.none, i)
 Group.new('LspDiagnosticsWarning', c.orange_400, c.deep_red, i)
 Group.new('LspDiagnosticsError',   c.red_500,    c.deep_red, i)
-Group.new('LspDiagnosticsDefaultError', c.deep_orange_a700,    c.none, i + ul)
+Group.new('LspDiagnosticsDefaultError', c.red_a700,    c.red_50, i)
 
 vim.fn.sign_define("LspDiagnosticsSignError", {text = "XX", numhl = "LspDiagnosticsDefaultError"})
 
