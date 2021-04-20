@@ -57,7 +57,7 @@ Group.new('Italic',       c.none,          c.none, i)
 Group.new('VertSplit',    c.blue_grey_900, c.none)
 Group.new('LineNr',       c.blue_grey_100, c.none, b + i)
 Group.new('SignColumn',   c.blue_grey_500, c.none)
-Group.new('MsgArea',      c.orange_900,    c.none, i)
+Group.new('MsgArea',      c.blue_grey_500, c.blue_grey_50, i)
 Group.new('Visual',       c.none,          c.light_blue_50)
 Group.new('Search',       c.none,          c.yellow_a200)
 Group.new('CursorLine',   c.none,          c.cursor_line)
@@ -67,6 +67,7 @@ Group.new('ColorColumn',  c.none,          c.cursor_line)
 -- Standard
 
 Group.new('Comment',     c.brown_400,       c.none, b + i)
+Group.new('Boolean',     c.teal_300,        c.none, no)
 Group.new('Constant',    c.cyan_600,        c.none, no)
 Group.new('Directory',   c.blue_700,        c.none, b)
 Group.new('Identifier',  c.indigo_500,      c.none, no)
@@ -86,10 +87,12 @@ Group.new('Type',        c.deep_purple_500, c.none, no)
 Group.new('Todo',        c.amber_900, c.none, i)
 
 -- Indent guides
-Group.new('Indent1',  c.red_100, c.none, i)
-Group.new('Indent2',  c.green_100, c.none, i)
-Group.new('Indent3',  c.blue_100, c.none, i)
-Group.new('Indent4',  c.orange_100, c.none, i)
+Group.new('Indent1',  c.red_50, c.none, i)
+Group.new('Indent2',  c.green_50, c.none, i)
+Group.new('Indent3',  c.blue_50, c.none, i)
+Group.new('Indent4',  c.orange_50, c.none, i)
+Group.new('Indent5',  c.cyan_50, c.none, i)
+Group.new('Indent6',  c.purple_50, c.none, i)
 Group.new('IndentSpace',  c.grey_100, c.none, i)
 
 -- Go
