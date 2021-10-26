@@ -126,3 +126,5 @@ Group.new('GitSignsDelete', c.red_600,  c.none)
 Group.new('GitSignsDeleteNr', c.red_100,  c.none)
 Group.new('GitSignsChange', c.orange_400,  c.none)
 Group.new('GitSignsChangeNr', c.orange_100, c.none)
+
+Group.new('tsvariablebuiltin', c.brown_500, c.none)
