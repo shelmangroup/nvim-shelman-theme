@@ -74,7 +74,7 @@ Group.new('Identifier',  c.indigo_500,      c.none, no)
 Group.new('Keyword',     c.light_blue_500,  c.none, no)
 Group.new('Function',    c.green_700,       c.none, no)
 Group.new('Label',       c.orange_600,      c.none, i)
-Group.new('String',      c.blue_grey_400,        c.none, i)
+Group.new('String',      c.blue_grey_400,   c.none, i)
 Group.new('Conditional', c.red_300,         c.none, no)
 Group.new('Operator',    c.blue_a200,       c.none, no)
 Group.new('PreProc',     c.teal_500,        c.none, no)
@@ -104,9 +104,14 @@ vim.api.nvim_command('highlight LspDiagnosticsUnderline gui=undercurl guisp=#ffd
 vim.api.nvim_command('highlight LspDiagnosticsUnderlineError cterm=undercurl guisp=#f44336')
 
 Group.new('LspDiagnosticsHint',    c.lime_500,   c.none, i)
-Group.new('LspDiagnosticsWarning', c.orange_400, c.deep_red, i) -- bar
-Group.new('LspDiagnosticsError',   c.red_500,    c.deep_red, i) -- foo
+Group.new('LspDiagnosticsWarning', c.orange_400, c.deep_red, i)
+Group.new('LspDiagnosticsError',   c.red_500,    c.deep_red, i)
 Group.new('LspDiagnosticsDefaultError', c.red_a700,    c.red_50, i)
+
+Group.new('DiagnosticUnderlineError',   c.red_500,    c.deep_red, i + uc)
+Group.new('DiagnosticUnderlineWarn',   c.orange_400,    c.deep_red, i + uc)
+vim.api.nvim_command('highlight DiagnosticUnderlineError guibg=none')
+vim.api.nvim_command('highlight DiagnosticUnderlineWarn guibg=none')
 
 -- UI
 Group.new('PMenu',       c.none,  c.blue_100)
@@ -128,3 +133,7 @@ Group.new('GitSignsChange', c.orange_400,  c.none)
 Group.new('GitSignsChangeNr', c.orange_100, c.none)
 
 Group.new('tsvariablebuiltin', c.brown_500, c.none)
+
+-- Marks
+Group.new('MarkSignHL', c.teal_500, c.cyan_50)
+Group.new('MarkSignNumHL', c.teal_500, c.cyan_50)
